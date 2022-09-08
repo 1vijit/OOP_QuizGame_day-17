@@ -9,7 +9,18 @@ for question in question_data:
     new_question = Question(q_text=question_text, q_answer=question_answer)
     question_bank.append(new_question)
 
-var =
+var = 1
+score = 0
+total = 0
 while var == 1:
     quiz=QuizBrain(question_bank)
+    var=quiz.still_has_questions()
+    response=quiz.next_question(total)
+    score += response
+    total += 1
+    print(f"Your current score is {score}/{total}.")
+
+
+
+
 
