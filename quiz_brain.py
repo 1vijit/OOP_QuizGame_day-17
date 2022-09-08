@@ -5,11 +5,11 @@ class QuizBrain:
 
     def next_question(self, total):
         current_ques = self.question_list[total]
-        response = input(f"Q.{self.question_number}: {current_ques.text} (True/False)?: ")
+        response = input(f"Q.{total+1}: {current_ques.text} (True/False)?: ")
         response = response.capitalize()
         self.question_number += 1
-        print(self.question_number)
         print(f"The correct answer was {current_ques.answer}")
+
         if response == current_ques.answer:
             print(f"You got it right")
             return 1

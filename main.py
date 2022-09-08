@@ -18,8 +18,11 @@ while var == 1:
     response=quiz.next_question(total)
     score += response
     total += 1
+    if total >11:
+        var =0
     print(f"Your current score is {score}/{total}.")
 
+print(f"Your final score was {score}/{total}.")
 
 
 
